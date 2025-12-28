@@ -32,6 +32,11 @@
    ```
    
    אם שרת ה-SQL Server שלך שונה, החלף את `DESKTOP-SITOH3J` בשם השרת שלך.
+   
+   **אפשרויות נוספות:**
+   - SQL Server Express: `Server=YOUR_SERVER_NAME\\SQLEXPRESS;...`
+   - LocalDB: `Server=(localdb)\\mssqllocaldb;...`
+   - SQL Server רגיל: `Server=YOUR_SERVER_NAME;...`
 
 3. פתח terminal ושוט אל תיקיית ה-Backend:
    ```bash
@@ -98,10 +103,13 @@
 ### Authentication
 - `POST /api/auth/login` - התחברות
 - `POST /api/auth/register` - הרשמה
+- `GET /api/auth/me` - קבלת פרטי משתמש נוכחי (requires auth)
+- `PUT /api/auth/update` - עדכון פרטי משתמש (requires auth)
 
 ### Products (רכבים)
 - `GET /api/products` - רשימת כל הרכבים
 - `GET /api/products/{id}` - רכב ספציפי
+- `GET /api/products/category/{categoryId}` - רכבים לפי קטגוריה
 - `POST /api/products` - יצירת רכב חדש (requires auth)
 - `PUT /api/products/{id}` - עדכון רכב (requires auth)
 - `DELETE /api/products/{id}` - מחיקת רכב (requires auth)
@@ -109,17 +117,37 @@
 ### Drivers (נהגים)
 - `GET /api/drivers` - רשימת כל הנהגים
 - `GET /api/drivers/{id}` - נהג ספציפי
+- `PUT /api/drivers/{id}` - עדכון נהג (requires auth)
+- `DELETE /api/drivers/{id}` - מחיקת נהג (requires auth)
 
 ### Items (אביזרים)
 - `GET /api/items` - רשימת כל האביזרים
 - `GET /api/items/{id}` - אביזר ספציפי
+- `PUT /api/items/{id}` - עדכון אביזר (requires auth)
+- `DELETE /api/items/{id}` - מחיקת אביזר (requires auth)
 
 ### Orders (הזמנות)
 - `GET /api/orders` - רשימת כל ההזמנות (requires auth)
+- `GET /api/orders/user` - הזמנות של המשתמש הנוכחי (requires auth)
+- `GET /api/orders/{id}` - הזמנה ספציפית (requires auth)
 - `POST /api/orders` - יצירת הזמנה חדשה (requires auth)
+- `DELETE /api/orders/{id}` - מחיקת הזמנה (requires auth)
 
 ### Categories (קטגוריות)
 - `GET /api/categories` - רשימת כל הקטגוריות
+- `GET /api/categories/{id}` - קטגוריה ספציפית
+- `PUT /api/categories/{id}` - עדכון קטגוריה (requires auth)
+- `DELETE /api/categories/{id}` - מחיקת קטגוריה (requires auth)
+
+### Seed (טעינת נתונים)
+- `POST /api/seed/load-data` - טעינת נתוני דמו (requires auth)
+
+### Users (משתמשים)
+- `GET /api/users/{id}` - משתמש ספציפי
+- `POST /api/users/register` - הרשמה
+- `POST /api/users/login` - התחברות
+- `PUT /api/users/{id}` - עדכון משתמש (requires auth)
+- `DELETE /api/users/{id}` - מחיקת משתמש (requires auth)
 
 ## פתרון בעיות
 

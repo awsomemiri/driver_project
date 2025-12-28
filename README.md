@@ -28,10 +28,10 @@
 1. פתח את הקובץ `appsettings.json` בתיקיית `BackendProject/BackendProject.Api/`
 2. בדוק או שנה את ה-connection string לפי שרת ה-SQL Server שלך:
    ```json
-   "DefaultConnection": "Server=DESKTOP-SITOH3J;Database=BackendProject;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=True;"
+   "DefaultConnection": "Server=YOUR_SERVER_NAME;Database=BackendProject;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=True;"
    ```
    
-   אם שרת ה-SQL Server שלך שונה, החלף את `DESKTOP-SITOH3J` בשם השרת שלך.
+   החלף את `YOUR_SERVER_NAME` בשם השרת שלך.
    
    **אפשרויות נוספות:**
    - SQL Server Express: `Server=YOUR_SERVER_NAME\\SQLEXPRESS;...`

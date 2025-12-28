@@ -1,0 +1,39 @@
+# Node modules
+node_modules/
+frontend/node_modules/
+frontend/frontend/frontend-new/node_modules/
+
+# Build outputs
+bin/
+obj/
+*.dll
+*.pdb
+*.cache
+
+# Visual Studio / Rider
+.vs/
+.idea/
+*.user
+*.suo
+*.sln.docstates
+
+# Environment files
+.env
+.env.local
+appsettings.Development.json
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+*.swp
+*.swo
+*~
+

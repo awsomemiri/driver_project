@@ -1,0 +1,215 @@
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 20px;
+  background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
+  background-color: #0a0a0a;
+  background-repeat: repeat;
+}
+
+.profile-card {
+  background: #111;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 600px;
+  direction: rtl;
+  border: 2px solid #C0C0C0;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.profile-header h2 {
+  color: #C0C0C0;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.edit-button {
+  background: #C0C0C0;
+  color: #111;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.edit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(192, 192, 192, 0.3);
+  background: #d8d8d8;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #E5E4E2;
+  font-weight: 600;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #C0C0C0;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  box-sizing: border-box;
+  background-color: #1f1f1f;
+  color: #E5E4E2;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #F5F5F5;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+}
+
+.form-group input:hover {
+  border-color: #DCDCDC;
+}
+
+.form-group input:disabled {
+  background-color: #1a1a1a;
+  color: #888;
+  cursor: not-allowed;
+}
+
+.form-group input.error {
+  border-color: #e74c3c;
+}
+
+.error-message {
+  color: #ff4444;
+  font-size: 14px;
+  margin-top: 5px;
+  display: block;
+}
+
+.general-error {
+  background: #3a0000;
+  border: 1px solid #ff4444;
+  color: #ff6666;
+  padding: 10px;
+  border-radius: 6px;
+  margin: 15px 0;
+  text-align: center;
+}
+
+.form-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  justify-content: flex-start;
+}
+
+.save-button {
+  padding: 12px 25px;
+  background: #C0C0C0;
+  color: #111;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.save-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(192, 192, 192, 0.3);
+  background: #d8d8d8;
+}
+
+.cancel-button {
+  padding: 12px 25px;
+  background: #333;
+  color: #E5E4E2;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cancel-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 102, 102, 0.3);
+  background: #444;
+}
+
+.save-button:disabled,
+.cancel-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.profile-error {
+  background: #111;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  border: 2px solid #C0C0C0;
+}
+
+.profile-error p {
+  color: #ff4444;
+  font-size: 18px;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 10px;
+  }
+  
+  .profile-card {
+    padding: 30px 20px;
+  }
+  
+  .profile-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+  }
+  
+  .profile-header h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+}

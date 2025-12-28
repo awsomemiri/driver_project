@@ -1,4 +1,4 @@
-# פרויקט Online Store
+# פרויקט חנות רכבים אונליין
 
 פרויקט Full Stack לניהול חנות רכבים אונליין.
 
@@ -82,72 +82,72 @@
 - **משתמש 1**: `john_doe` / `password123`
 - **משתמש 2**: `jane_smith` / `password123`
 
-## Features
+## תכונות
 
 - **Backend**:
-  - JWT Authentication
+  - אימות JWT
   - Entity Framework Core עם SQL Server
-  - RESTful API עם Swagger documentation
-  - CORS מוגדר ל-React app
+  - RESTful API עם תיעוד Swagger
+  - CORS מוגדר לאפליקציית React
   - AutoMapper למיפוי אובייקטים
-  - Seeding אוטומטי של DB
+  - טעינת נתונים אוטומטית למסד הנתונים
 
 - **Frontend**:
   - React עם Redux Toolkit
   - Material-UI לתצוגה מודרנית
-  - Routing עם React Router
+  - ניתוב עם React Router
   - אינטגרציה עם Backend API
 
-## Endpoints
+## נקודות קצה (Endpoints)
 
-### Authentication
+### אימות (Authentication)
 - `POST /api/auth/login` - התחברות
 - `POST /api/auth/register` - הרשמה
-- `GET /api/auth/me` - קבלת פרטי משתמש נוכחי (requires auth)
-- `PUT /api/auth/update` - עדכון פרטי משתמש (requires auth)
+- `GET /api/auth/me` - קבלת פרטי משתמש נוכחי (דורש אימות)
+- `PUT /api/auth/update` - עדכון פרטי משתמש (דורש אימות)
 
-### Products (רכבים)
+### רכבים (Products)
 - `GET /api/products` - רשימת כל הרכבים
 - `GET /api/products/{id}` - רכב ספציפי
 - `GET /api/products/category/{categoryId}` - רכבים לפי קטגוריה
-- `POST /api/products` - יצירת רכב חדש (requires auth)
-- `PUT /api/products/{id}` - עדכון רכב (requires auth)
-- `DELETE /api/products/{id}` - מחיקת רכב (requires auth)
+- `POST /api/products` - יצירת רכב חדש (דורש אימות)
+- `PUT /api/products/{id}` - עדכון רכב (דורש אימות)
+- `DELETE /api/products/{id}` - מחיקת רכב (דורש אימות)
 
-### Drivers (נהגים)
+### נהגים (Drivers)
 - `GET /api/drivers` - רשימת כל הנהגים
 - `GET /api/drivers/{id}` - נהג ספציפי
-- `PUT /api/drivers/{id}` - עדכון נהג (requires auth)
-- `DELETE /api/drivers/{id}` - מחיקת נהג (requires auth)
+- `PUT /api/drivers/{id}` - עדכון נהג (דורש אימות)
+- `DELETE /api/drivers/{id}` - מחיקת נהג (דורש אימות)
 
-### Items (אביזרים)
+### אביזרים (Items)
 - `GET /api/items` - רשימת כל האביזרים
 - `GET /api/items/{id}` - אביזר ספציפי
-- `PUT /api/items/{id}` - עדכון אביזר (requires auth)
-- `DELETE /api/items/{id}` - מחיקת אביזר (requires auth)
+- `PUT /api/items/{id}` - עדכון אביזר (דורש אימות)
+- `DELETE /api/items/{id}` - מחיקת אביזר (דורש אימות)
 
-### Orders (הזמנות)
-- `GET /api/orders` - רשימת כל ההזמנות (requires auth)
-- `GET /api/orders/user` - הזמנות של המשתמש הנוכחי (requires auth)
-- `GET /api/orders/{id}` - הזמנה ספציפית (requires auth)
-- `POST /api/orders` - יצירת הזמנה חדשה (requires auth)
-- `DELETE /api/orders/{id}` - מחיקת הזמנה (requires auth)
+### הזמנות (Orders)
+- `GET /api/orders` - רשימת כל ההזמנות (דורש אימות)
+- `GET /api/orders/user` - הזמנות של המשתמש הנוכחי (דורש אימות)
+- `GET /api/orders/{id}` - הזמנה ספציפית (דורש אימות)
+- `POST /api/orders` - יצירת הזמנה חדשה (דורש אימות)
+- `DELETE /api/orders/{id}` - מחיקת הזמנה (דורש אימות)
 
-### Categories (קטגוריות)
+### קטגוריות (Categories)
 - `GET /api/categories` - רשימת כל הקטגוריות
 - `GET /api/categories/{id}` - קטגוריה ספציפית
-- `PUT /api/categories/{id}` - עדכון קטגוריה (requires auth)
-- `DELETE /api/categories/{id}` - מחיקת קטגוריה (requires auth)
+- `PUT /api/categories/{id}` - עדכון קטגוריה (דורש אימות)
+- `DELETE /api/categories/{id}` - מחיקת קטגוריה (דורש אימות)
 
-### Seed (טעינת נתונים)
-- `POST /api/seed/load-data` - טעינת נתוני דמו (requires auth)
+### טעינת נתונים (Seed)
+- `POST /api/seed/load-data` - טעינת נתוני דמו (דורש אימות)
 
-### Users (משתמשים)
+### משתמשים (Users)
 - `GET /api/users/{id}` - משתמש ספציפי
 - `POST /api/users/register` - הרשמה
 - `POST /api/users/login` - התחברות
-- `PUT /api/users/{id}` - עדכון משתמש (requires auth)
-- `DELETE /api/users/{id}` - מחיקת משתמש (requires auth)
+- `PUT /api/users/{id}` - עדכון משתמש (דורש אימות)
+- `DELETE /api/users/{id}` - מחיקת משתמש (דורש אימות)
 
 ## פתרון בעיות
 
